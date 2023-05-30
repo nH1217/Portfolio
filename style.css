@@ -39,7 +39,7 @@ img {
 }
 
 .container {
-  border: solid blue;
+  /* border: solid blue; */
   /* width: calc(100% - 200px);
     max-width: 1000px; */
   width: min(70rem, 100% - 2rem);
