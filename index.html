@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="top">
-    <a href="#skills" class="skip-to-content">Skip to content</a>
+    <a href="#main" class="skip-to-content">Skip to content</a>
+
+    <!-- background clip -->
 
     <!-- Header -->
     <header>
       <div class="container">
         <!-- Add a class to the p tag, then in style sheet, add a css rule which sets the font-size to 18px -->
-        <p class="my-name">Nigel</p>
+        <p id="my-name">Nigel</p>
         <nav>
           <ul>
             <li>
@@ -33,10 +35,14 @@
     </header>
 
     <main id="main">
+      <p class="sr-only">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, cum!
+      </p>
+
       <!-- Intro -->
       <section id="intro">
         <div class="container">
-          <p>Welcome!</p>
+          <p id="my-name">Welcome!</p>
           <!-- Add an H1 Heading, a paragraph, and a contact link -->
           <h1>Hi, I'm Nigel, Front-End Developer</h1>
           <p>
@@ -47,8 +53,8 @@
           </p>
           <a href="mailto:nharris1217@gmail.com" class="button-link">Contact</a>
           <!-- <a href="tel:">Call us!</a> -->
-        </section>
         </div>
+      </section>
 
       <!-- Skills -->
       <section id="skills">
@@ -61,19 +67,24 @@
             <li>Javascript</li>
             <li>React</li>
           </ul>
-        </section>
         </div>
-       
-
+      </section>
+      <!-- Github -->
+      <section id="github">
+        <div class="container">
+          <h2>Github</h2>
+          <div id="reposContainer"></div>
+        </div>
+      </section>
       <!-- Portfolio -->
       <section id="portfolio">
         <div class="container">
           <h2>Portfolio</h2>
-          <p>
+          <p class=".desc">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
             tenetur quos fuga, pariatur quis dicta!
           </p>
-  
+
           <br />
           <br />
           <div class="grid-container">
@@ -109,8 +120,11 @@
     <footer>
       <div class="contiainer">
         <p>&copy; Nigel</p>
-        <a href="#top">Back to the top</a>
+        <a href="#">Back to the top</a>
       </div>
     </footer>
+
+    <!-- <script>JS Here</script> -->
+    <script src="script.js"></script>
   </body>
 </html>
