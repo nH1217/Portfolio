@@ -16,9 +16,6 @@
 
   --purple: rgb(82, 5, 134);
   --purple-muted: rgba(82, 5, 134, 0.26);
-
-  
-
 }
 
 * {
@@ -184,6 +181,65 @@ nav a:not(.button-link) {
     top: 1.5rem;
     right: 2rem;
     z-index: 99999;
+
+    /* hamburger styles */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 12px 2px;
+  }
+
+  /* set button span to pos relative */
+  .menu-toggle span {
+    position: relative;
+  }
+  /* create before & after pseudo elements */
+  .menu-toggle span::before,
+  .menu-toggle span::after {
+    position: absolute;
+    content: '';
+    left: 0;
+
+    transform: rotate(0deg);
+    transition: all 0.2s ease;
+  }
+
+  /* style menu lines */
+  .menu-toggle span,
+  .menu-toggle span::before,
+  .menu-toggle span::after {
+    display: inline-block;
+    width: 26px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+  }
+  /* position top menu line */
+  .menu-toggle span::before {
+    margin-top: -8px;
+  }
+
+  /* position bottom menu line */
+  .menu-toggle span::after {
+    margin-top: 8px;
+  }
+  /* active */
+  /* hide button span */
+  nav.open .menu-toggle span {
+    background-color: transparent;
+  }
+
+  /* default position for before & after pseudo elements (overlapping in the center of the button) */
+  nav.open .menu-toggle span::before,
+  nav.open .menu-toggle span::after {
+    margin-top: 0;
+  }
+  /* rotate top menu line */
+  nav.open .menu-toggle span::before {
+    transform: rotate(45deg);
+  }
+  /* rotate bottom menu line */
+  nav.open .menu-toggle span::after {
+    transform: rotate(-45deg);
   }
 
   nav ul {
@@ -314,7 +370,7 @@ h1 {
 
 } */
 
-.repo-info ul[id^="language"] li {
+.repo-info ul[id^='language'] li {
   font-size: 12px;
   text-transform: uppercase;
   color: var(--blue);
@@ -344,9 +400,8 @@ h1 {
   border: solid white 1px;
   border-radius: 10px;
 
-/* x, y, blur, spread, color */
+  /* x, y, blur, spread, color */
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-
 }
 
 .grid-container h3 {
@@ -379,7 +434,6 @@ article h3::after {
 /* add variables for purple and purple-muted */
 /* change the background-color/border & text color */
 
-
 /* SEPARATE STYLING & STRUCTURE */
 
 article ul {
@@ -403,7 +457,6 @@ article li {
   border: var(--purple-muted) solid 1px;
   border-radius: 30px;
 }
-
 
 /* Footer */
 
