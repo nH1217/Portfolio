@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 60px;
 }
 
 body {
@@ -187,6 +188,7 @@ nav a:not(.button-link) {
     background-color: transparent;
     border: none;
     padding: 12px 2px;
+    
   }
 
   /* set button span to pos relative */
@@ -295,6 +297,7 @@ h1 {
   padding: 0;
 
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -348,6 +351,8 @@ h1 {
   font-size: 18px;
   font-weight: 500;
   text-transform: lowercase;
+
+  hyphens: auto;
 }
 
 .repo-info p.desc {
@@ -388,11 +393,24 @@ h1 {
 
 /* Portfolio */
 
+#portfolio {
+  padding-block: 40px 80px;
+}
+
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 40px;
 }
+
+@media (min-width: 30rem) {
+  .grid-container{
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  }
+}
+
 
 .grid-container img {
   aspect-ratio: 1.4;
@@ -458,6 +476,44 @@ article li {
   border-radius: 30px;
 }
 
+/* CTA */
+
+#cta .container {
+  background-color: var(--primary);
+
+  padding: 40px 60px 50px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+
+  margin-bottom: -80px;
+  position: relative;
+}
+
+#cta a {
+  display: inline-flex;
+  background-color: white;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: var(--purple) solid 2px;
+
+  color: var(--purple);
+  font-weight: 600;
+  margin-inline: 4px;
+  margin-top: 20px;
+}
+
+#cta i {
+  font-size: 20px;
+}
+
+#cta img {
+  width: 60px;
+}
+
 /* Footer */
 
 footer .container {
@@ -466,5 +522,8 @@ footer .container {
   align-items: center;
   gap: 40px;
 
-  padding-block: 10px;
+  padding-block: 140px 50px;
 }
+
+
+

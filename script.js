@@ -16,6 +16,15 @@ menuButton.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
 
+// grab all link elements inside the navigation
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+  });
+});
+console.log(navLinks);
+
 // Fetch Github
 
 fetch('https://api.github.com/users/lily-fitz/repos')
