@@ -16,7 +16,7 @@
     <header>
       <div class="container">
         <!-- Add a class to the p tag, then in style sheet, add a css rule which sets the font-size to 18px -->
-        <p id="my-name">Nigel</p>
+        <p id="my-name">nH.</p>
         <nav>
           <ul>
             <li>
@@ -51,16 +51,19 @@
       <!-- Intro -->
       <section id="intro">
         <div class="container">
-          <p id="my-name">Welcome!</p>
-          <!-- Add an H1 Heading, a paragraph, and a contact link -->
-          <h1>Hi, I'm Nigel, Front-End Developer</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, earum
-            blanditiis tempora rerum, natus ea aperiam ad consequatur harum
-            assumenda quo, quae molestias praesentium atque laborum nemo facere.
-            Libero, harum.
+          <p class="text-box">
+            <span class="text-content welcome"> Welcome! I'm...</span>
           </p>
-          <a href="mailto:nharris1217@gmail.com" class="button-link">Contact</a>
+          <h1 class="text-box">
+            <span class="text-content name-title">Nigel Harris</span>
+          </h1>
+          <p class="text-box">
+            <span class="text-content name-title">Full-Stack Developer</span>
+          </p>
+          <br />
+          <a href="mailto:nharris1217@gmail.com" class="button-link contact"
+            >Contact</a
+          >
           <!-- <a href="tel:">Call us!</a> -->
         </div>
       </section>
@@ -71,10 +74,12 @@
           <h2>Skills</h2>
 
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>React</li>
+            <li><img src="html.png" alt="">HTML</li>
+            <li><img src="css.png" alt="">CSS</li>
+            <li><img src="js.svg" alt="">Javascript</li>
+            <li><img src="react.png" alt="">React</li>
+            <li><img src="node.svg" alt="">Node</li>
+            <li><img src="php.png" alt="">PHP</li>
           </ul>
         </div>
       </section>
@@ -85,8 +90,6 @@
           <div id="reposContainer"></div>
         </div>
       </section>
-
-
 
       <!-- Portfolio -->
       <section id="portfolio">
@@ -148,21 +151,18 @@
     <section id="cta">
       <div class="container">
         <img src="comment-code.png" alt="" />
-        <h2>Interested in working together?
-          Let's chat!</h2>
-          <div class="contact-buttons">
-            <a href="#">
-              <i class="fa-regular fa-envelope"></i>
-              Email
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-linkedin-in"></i>
-              LinkedIn
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-twitter"></i>Twitter
-            </a>
-          </div>
+        <h2>Interested in working together? Let's chat!</h2>
+        <div class="contact-buttons">
+          <a href="#">
+            <i class="fa-regular fa-envelope"></i>
+            Email
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-linkedin-in"></i>
+            LinkedIn
+          </a>
+          <a href="#"> <i class="fa-brands fa-twitter"></i>Twitter </a>
+        </div>
       </div>
     </section>
 
@@ -175,8 +175,17 @@
     </footer>
 
     <!-- <script>JS Here</script> -->
-    <script src="https://kit.fontawesome.com/18f7f68fcd.js" crossorigin="anonymous">
-    </script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/18f7f68fcd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- my script should always be last-->
     <script src="script.js"></script>
   </body>
 </html>

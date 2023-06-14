@@ -74,3 +74,16 @@ fetch('https://api.github.com/users/lily-fitz/repos')
   .catch((error) => {
     console.error(error);
   });
+
+
+  // GSAP Animation
+
+  const tl = gsap.timeline({
+    default: {
+      ease: 'power1.out', 
+    },
+  })
+
+  tl.to('.welcome', { y: 0, duration: .8 })
+tl.to('.name-title', { y: 0, duration: 1.1, stagger: 0.5 }, '-=.3')
+tl.fromTo('.contact', { opacity: 0 }, { opacity: 1, duration: 1 })
